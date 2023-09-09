@@ -1,0 +1,150 @@
+#include<iostream>
+using namespace std;
+
+//function declearation.......
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    int result = check(a,b);
+    cout<<result;
+    return 0;
+}
+
+Q1 - Write a program to check whether two numbers (entered by user) are equal or not.
+
+#include <iostream>
+
+using namespace std;
+
+bool check(int a, int b)
+{
+    if (a==b)
+        return true;
+    else 
+    return false;
+}
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    int result = check(a,b);
+    cout<<result;
+    return 0;
+}
+
+Q2 - Write a program to take the values of two variables a and b from the keyboard and then check if
+both the conditions 'a < 50' and 'a < b' are true.
+#include <iostream>
+
+using namespace std;
+
+bool check(int a, int b)
+{
+    if (!(a<b && a<50))
+        return true;
+    else 
+    return false;
+}
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    int result = check(a,b);
+    cout<<result;
+    return 0;
+}
+
+Q3 - There are 45 total pupils in the class, 25 of whom are boys. Write a program to find how many
+girls received grades "A" if 17 boys made up 80% of the students that received grades "A".
+
+
+#include <iostream>
+
+using namespace std;
+
+int grad_A(int totalPupils)
+{
+    int boys = 25;
+    int boysReceivedA = (17 * totalPupils) / 100;
+    int totalReceivedA = (80 * totalPupils) / 100;
+    int girlsReceivedA = totalReceivedA - boysReceivedA;
+    return girlsReceivedA;
+
+}
+
+
+
+Q4 - Write a program to calculate the sum of the first and the second last digit of a 5 digit number.
+
+#include <iostream>
+
+using namespace std;
+
+int sum(int a[]){
+    return(a[0]+a[5-2]);
+}
+    
+int main()
+{
+    int input[5];
+    for (int i = 0; i <5; i++) {
+        /* code */
+        cin>>input[i];
+    }
+    int result = sum(input) ;
+    cout<<result;
+    return 0;
+}
+
+
+Q5 - Write a program to calculate the sum of digits of a 3 digit number.
+
+#include <iostream>
+
+using namespace std;
+
+int sum(int n){
+    int digitSum = 0;
+    while(n>0){
+        digitSum = digitSum+(n%10);
+        n = n/10;
+    }
+    return digitSum;
+}
+    
+int main()
+{
+    int n;
+    std::cin >>n;
+    int result = sum(n) ;
+    cout<<result;
+    return 0;
+}
+
+Q6 - Design a calculator to perform basic arithmetic operations (+,-,/,*,%)
+
+
+#include <iostream>
+
+using namespace std;
+void allOperations(int a, int b)
+    {
+        cout<<a+b<<endl;
+        cout<<a-b<<endl;
+        cout<< a*b<<endl;
+        float division = static_cast<float>(a)/b;
+        cout<<division;
+    }
+int main()
+{
+    int a,b;
+    std::cin >>a>>b;
+    allOperations(a,b);
+    return 0;
+}
+
+
